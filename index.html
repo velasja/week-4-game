@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Bootstrap link CDN -->
+
+	<!-- Google fonts -->
+
+	<!-- Link to style.css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<!-- Link to reset.css -->
+	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<!-- Link to jQuery library -->
+	<meta charset="UTF-8">
+	<title>Crystals Collector</title>
+</head>
+<body>
+	<h1>Crystals Collector</h1>
+	<div class="infobox">
+		<p>You will be given a random number at the start of the game.</p>
+		<p>Clicking on any of the four crystals below will add points to your score. The value of each crystal is hidden from you until you click on it.</p>
+		<p>You win the game by matching your total score to the random number. You lose if your total score goes above the random number.</p>
+		<p>The values of each crystal will change when the game starts again.</p>
+	</div>
+
+	<div class="numberbox">
+
+		<span id="number"></span>
+
+	</div>
+
+	<div class="winlossbox">
+
+		<p>Wins: <span id="wins"></span></p>
+		<p>Losses: <span id="losses"></span></p>
+
+	</div>
+
+	<div class="crystalbox">
+
+		<img class="crystal" id="crystal1" src="assets/images/gemstone.ico" alt="gemstone" width="200px">
+		<img class="crystal" id="crystal2" src="assets/images/ksokoban.ico" alt="ksokoban" width="200px">
+		<img class="crystal" id="crystal3" src="assets/images/sapphire.ico" alt="sapphire" width="200px">
+		<img class="crystal" id="crystal4" src="assets/images/swarovski crystal.ico" alt="swarovski crystal" width="200px">
+
+	</div>
+
+	<div class="scorebox">
+
+		<p>Your total score is:</p>
+
+		<span class id="score"></span>
+
+	</div>
+
+
+	<!-- Classes include
+	#number
+	#score
+	#wins
+	#losses
+	.crystal
+	#crystal1
+	#crystal2
+	#crystal3
+	#crystal4 -->
+<script src="assets/javascript/game.js"></script>
+</body>
+</html>
