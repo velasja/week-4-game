@@ -1,34 +1,55 @@
-var randomValue1;
-var randomValue2;
-var randomValue3;
-var randomValue4;
-var crystalInput = "";
-var randomNumber;
-var userScore=0;
-var wins=0;
-var losses=0;
-
 $(document).ready(function(){
-	
-	// variables wins, losses and userScore = 0
+	var userScore;
+	var wins=0;
+	var losses=0;
+	var randomNumber = 19 + Math.floor(Math.random() * 101);
 
-	var randomNumber = 19 + Math.floor(Math.random() * 120);
-	
-	$("#number").text(randomNumber);
-	$("#wins").text(wins);
-	$("#losses").text(losses);
-	// randomNumber between 18 and 120 generated, written to screen
 
-	var randomValue1 = 1 + Math.floor(Math.random() * 12);
-	var randomValue2 = 1 + Math.floor(Math.random() * 12);
-	var randomValue3 = 1 + Math.floor(Math.random() * 12);
-	var randomValue4 = 1 + Math.floor(Math.random() * 12);
-	// crystals given value between 1 and 12
-	$(".crystal").click(function() {
-		if (userScore < randomNumber) {
-			$("#score").html(this)
+	function initialize () {
+		$("#wins").text(wins);
+		$("#losses").text(losses);
+		randomNumber = 19 + Math.floor(Math.random() * 101);
+		$("#number").text(randomNumber);
+		userScore = 0;
+		$("#score").text(userScore);
+		$("#crystal1").val(Math.floor(Math.random() * 12) + 1);
+		$("#crystal2").val(Math.floor(Math.random() * 12) + 1);
+		$("#crystal3").val(Math.floor(Math.random() * 12) + 1);
+		$("#crystal4").val(Math.floor(Math.random() * 12) + 1);
+	}
 
-	};
+	initialize();
+
+		$(".crystal").click(function() {
+			var a = parseInt($(this).val());
+			console.log(a)
+			userScore = a + userScore;
+			console.log(userScore);
+			$("#score").text(userScore);
+			compare();
+		});
+
+	function compare () {
+		if (userScore == randomNumber) {
+			alert("You win!");
+			wins++;
+			console.log(wins);
+			console.log(userScore);
+			console.log(randomNumber);
+			initialize();
+		
+		} else if (userScore > randomNumber) {
+			alert("You lose!");
+			losses++;
+			console.log(losses);
+			initialize();
+		}
+	}
+
+});
+
+	// };
+
 	// document.addEventListener("click", function(){
 	// 	var userScore += crystalInput
 	// })
@@ -37,10 +58,31 @@ $(document).ready(function(){
 	// crystal value is added to userScore
 
 	// if/else statement
-	// if userScore >= randomNumber
-		// assign new random value between 1 and 12 to crystals 1-4
-		// assign new random value to randomNumber
-		// reset userScore to 0
+		// else if (userScore > randomNumber) {
+		// // assign new random value between 1 and 12 to crystals 1-4
+		// 	losses += 1;
+		// 	var randomValue1 = 1 + Math.floor(Math.random() * 12);
+		// 	var randomValue2 = 1 + Math.floor(Math.random() * 12);
+		// 	var randomValue3 = 1 + Math.floor(Math.random() * 12);
+		// 	var randomValue4 = 1 + Math.floor(Math.random() * 12);
+		// 	// assign new random value to randomNumber
+		// 	var randomNumber = 19 + Math.floor(Math.random() * 120);
+		// 	// reset userScore to 0
+		// 	var userScore = 0;
+		// } else if (userScore === randomNumber) {
+		// 	wins += 1;
+		// 	var randomValue1 = 1 + Math.floor(Math.random() * 12);
+		// 	var randomValue2 = 1 + Math.floor(Math.random() * 12);
+		// 	var randomValue3 = 1 + Math.floor(Math.random() * 12);
+		// 	var randomValue4 = 1 + Math.floor(Math.random() * 12);
+		// 	// assign new random value to randomNumber
+		// 	var randomNumber = 19 + Math.floor(Math.random() * 120);
+		// 	// reset userScore to 0
+		// 	var userScore = 0;
+		// }
+	// } else if ()
+		
+		
 
 		// else 
 	// if userScore === randomNumber
@@ -48,11 +90,3 @@ $(document).ready(function(){
 
 	// if userScore > randomNumber
 		// add 1 to losses
-
-	console.log(randomNumber);
-	console.log(randomValue1);
-	console.log(randomValue2);
-	console.log(randomValue3);
-	console.log(randomValue4);
-
-});
