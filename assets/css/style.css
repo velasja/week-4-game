@@ -1,15 +1,63 @@
 body {
 	font-size:16px;
-}	
+	background-color: #fcfcfc;
+}
 #number {
 	font-size:20px;
 	font-weight:bold;
 }
-#score
+
+.crystals {
+	margin-left: 50px;
+}
+
+.crystalImg {
+	height:150px;
+	width:150px;
+	position: relative;
+}
+
+#crystal1 {
+	right: 35px;
+	top:-100px;
+}
+#crystal2 {
+	right: 35px;
+	top:-100px;
+}
+#crystal3 {
+	right: 35px;
+	top:-100px;
+}
+
+#crystal4 {
+	right: 35px;
+	top:-100px;
+}
+
+.chip {
+	background-color: #546e7a;
+	color: white;
+}
+.card-action {
+	color:#ffab40;
+}
+#score {
+	font-size:20px;
+	font-weight:bold;
+}
+
+h1 {
+	text-align: center;
+	font-weight: 600;
+	color: #78909c;
+	text-shadow:1px 0px 1px #ccc, 0px 1px 1px #eee,
+    2px 1px 1px #ccc, 1px 2px 1px #eee,
+    3px 2px 1px #ccc, 2px 3px 1px #eee,
+    4px 3px 1px #ccc, 3px 4px 1px #eee,
+    5px 4px 1px #ccc, 4px 5px 1px #eee,
+    6px 5px 1px #ccc, 5px 6px 1px #eee,
+    7px 6px 1px #ccc;
+}
 #wins
 #losses
-.crystal
-#crystal1
-#crystal2
-#crystal3
-#crystal4

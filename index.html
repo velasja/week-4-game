@@ -1,59 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- Bootstrap link CDN -->
-
-	<!-- Google fonts -->
-
-	<!-- Link to style.css -->
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<!-- Link to reset.css -->
-	
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<!-- Link to jQuery library -->
 	<meta charset="UTF-8">
 	<title>Crystals Collector</title>
+	<!-- Compiled and minified CSS -->
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+	 <!--Import Google Icon Font-->
+	 <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">	<!-- Link to style.css -->
+	 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
-	<h1>Crystals Collector</h1>
-	<div class="infobox">
-		<p>You will be given a random number at the start of the game.</p>
-		<p>Clicking on any of the four crystals below will add points to your score. The value of each crystal is hidden from you until you click on it.</p>
-		<p>You win the game by matching your total score to the random number. You lose if your total score goes above the random number.</p>
-		<p>The values of each crystal will change when the game starts again.</p>
+	<div class="container">
+		<h1>Crystals Collector</h1>
+
+		<div class="row">
+      <div class="col s12 m4">
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text">
+            <span class="card-title">Rules of the Game</span>
+						<p>Match your score with the random number by clicking the crystals. Be careful!
+						If you exceed the number, you lose.</p>
+          </div>
+          <div class="card-action">
+            <p>Here is your random number:  <span id="number"></span></p>
+
+						<p>Your total score is:  				<span id="score"></span></p>
+
+          </div>
+        </div>
+      </div>
+		<div class="col s2 m2">
+		</div>
+		<div class="col s12 m6 crystals">
+				<img class="crystalImg" src="assets/images/gemstone.ico" alt="gemstone">
+				<a class="btn-floating btn-large waves-effect waves-light red crystal" id="crystal1"><i class="material-icons">add</i></a>
+
+				<img class="crystalImg" src="assets/images/ksokoban.ico" alt="ksokoban">
+				<a class="btn-floating btn-large waves-effect waves-light red crystal" id="crystal2"><i class="material-icons">add</i></a>
+
+			<div class="row">
+
+				<img class="crystalImg" src="assets/images/sapphire.ico" alt="sapphire">
+				<a class="btn-floating btn-large waves-effect waves-light red crystal" id="crystal3"><i class="material-icons">add</i></a>
+
+				<img class="crystalImg" src="assets/images/swarovskicrystal.ico" alt="swarovski crystal">
+				<a class="btn-floating btn-large waves-effect waves-light red crystal" id="crystal4"><i class="material-icons">add</i></a>
+			</div>
+
+    </div>
+
+		<div class="winlossbox">
+			<div class="chip">
+				Wins: <span id="wins"></span>
+				<img src="assets/images/emoticon.png" alt="happy-face">
+			</div>
+			<div class="chip">
+				Losses: <span id="losses"></span>
+				<img src="assets/images/emoticon-dead.png" alt="sad-face">
+			</div>
+		</div>
 	</div>
-
-	<div class="numberbox">
-
-		<span id="number"></span>
-
-	</div>
-
-	<div class="winlossbox">
-
-		<p>Wins: <span id="wins"></span></p>
-		<p>Losses: <span id="losses"></span></p>
-
-	</div>
-
-	<div class="crystalbox">
-
-		<button class="crystal" id="crystal1"><img src="assets/images/gemstone.ico" alt="gemstone">
-		<button class="crystal" id="crystal2"><img src="assets/images/ksokoban.ico" alt="ksokoban">
-		<button class="crystal" id="crystal3"><img src="assets/images/sapphire.ico" alt="sapphire">
-		<button class="crystal" id="crystal4"><img src="assets/images/swarovski crystal.ico" alt="swarovski crystal">
-
-	</div>
-
-	<div class="scorebox">
-
-		<p>Your total score is:</p>
-
-		<span class id="score"></span>
-
-	</div>
-
 
 	<!-- Classes include
 	#number
@@ -65,6 +71,9 @@
 	#crystal2
 	#crystal3
 	#crystal4 -->
-<script src="assets/javascript/game.js"></script>
+	<!-- Link to jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<script src="assets/javascript/game.js"></script>
 </body>
 </html>
